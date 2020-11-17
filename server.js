@@ -64,7 +64,7 @@ app.post("/reg", function (req, res) {
         if (req.body.login == tab[i].login) {
             bool = false;
             console.log("Rejestracja się nie powiodła")
-            res.redirect("/register")
+            res.send("TO KONTO JUŻ ISTNIEJE")
         }
     }
     if (bool) {
@@ -72,7 +72,7 @@ app.post("/reg", function (req, res) {
         tab.push(user)
         help++;
         console.log("Rejestracja się powiodła.")
-        res.redirect("/main")
+        res.send("REJESTRACJA ZAKOŃCZONA POWODZENIEM " + req.body.login)
         console.log(user)
     }
 })
