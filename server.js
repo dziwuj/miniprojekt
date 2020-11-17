@@ -72,7 +72,7 @@ app.post("/reg", function (req, res) {
         tab.push(user)
         help++;
         console.log("Rejestracja się powiodła.")
-        res.send("REJESTRACJA ZAKOŃCZONA POWODZENIEM " + req.body.login)
+        res.send("Witaj na pokładzie " + req.body.login)
         console.log(user)
     }
 })
